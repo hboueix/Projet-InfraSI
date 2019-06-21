@@ -30,7 +30,7 @@
   ## Configuration de pfSense
    ### Option 1 : Assigner Interfaces
       1) Définir VLANs now ? : NON
-      2) Renseigner interface WAN (en0) AND interface LAN (en0)
+      2) Renseigner interface WAN (em0) AND interface LAN (em0)
       3) Valider : "y"
     
    ### Option 2 : Set Int-IP Add
@@ -52,7 +52,20 @@
       9)<Enter> continue
       
   ## Configuration WEB BASIC (ADMIN)
-      
+     
+    Sur le poste client du LAN (dans l'url d'un navigateur) : taper l'adresse IP
+    
+    1) Suivre le setup
+    2) Général Information :
+        hostname,domain,DNS
+        Laisser cocher "Override DNS"
+    3) Régler la localisation et l'heure
+    4) Configure WAN interface :
+          IP Adress -> l'adresse IP du Client
+          Subnet masks : 24
+    5) Modifier le mdp admin (qui est également le mdp de la machine root)
+    6) Reload & finish
+          
       
       
       
