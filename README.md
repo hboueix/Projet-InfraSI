@@ -22,7 +22,7 @@
   2) Laisser l'autoboot (par défault)
   3) Accepter: "Copyright & Distribution"
   4) Selectionner: "Install pfSense"
-  5) Selectionner: "French keymap" & " ? "
+  5) Selectionner: "French keymap" & " continue "
   6) Partitioning: "Auto(UFS)"
   7) Manual Config: "No"
   8) Reboot et éjécter le supp-install
