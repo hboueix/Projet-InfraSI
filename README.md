@@ -11,7 +11,7 @@
 ## SHEMA
   
 <p align="center">
-  <img src="./schema.PNG" title="Schéma">
+  <img src="./images/schema.PNG" title="Schéma">
 </p>
  
 ## Installation de pfSense
@@ -33,26 +33,26 @@ Tout d'abord :
 Après le reboot on arrive donc sur l'écran de menu. On va effectuer une configuration basique pour l'instant, celle-ci nous permettra d'accèder à l'interface web d'administration.   
   
 1) Option 1 : Assign Interfaces
-  - Définir VLANs maintenant ? : "n"
-  - Renseigner interface WAN (em0) et l'interface LAN (em1)
-  - Valider : "y"
+    - Définir VLANs maintenant ? : "n"
+    - Renseigner interface WAN (em0) et l'interface LAN (em1)
+    - Valider : "y"
 2) Option 2 : Set Interface(s) IP address
-  - Selectionner l'interface WAN
-  - DHCPv4 ? : "y"
-  - DHCPv6 ? : "n"
-  - <Enter> pour pas d'IPv6
-  - Revert to HTTP ? : "n"
-  - <Enter> pour continuer  
+    - Selectionner l'interface WAN
+    - DHCPv4 ? : "y"
+    - DHCPv6 ? : "n"
+    - <Enter> pour pas d'IPv6
+    - Revert to HTTP ? : "n"
+    - <Enter> pour continuer  
 3) Option 2 : Set Interface(s) IP address
-  - Select l'interface LAN
-  - Entrez l'adresse IPV4 : 192.168.1.1
-  - Entrez le masque au format CIDR : 24
-  - <Enter> pour pas de gateway
-  - <Enter> pour pas d'IPv6
-  - DHCP server ? : "y"
-  - Adress range : 192.168.1.10 - 192.168.1.150
-  - Revert to HTTP ? "no"
-  - <Enter> pour continuer
+    - Select l'interface LAN
+    - Entrez l'adresse IPV4 : 192.168.1.1
+    - Entrez le masque au format CIDR : 24
+    - <Enter> pour pas de gateway
+    - <Enter> pour pas d'IPv6
+    - DHCP server ? : "y"
+    - Adress range : 192.168.1.10 - 192.168.1.150
+    - Revert to HTTP ? "no"
+    - <Enter> pour continuer
   
 Nous pouvons désormais accèder à l'interface web d'administration depuis le LAN à l'adresse `192.168.1.1`.  
   
