@@ -2,68 +2,76 @@
   
  SSH hboueix@192.168.56.111 -D 7777 (port) + CONFIG sur firefox pour rediriger la navigation vers la VM client
  
- ## OS & Matériel :
+## OS & Matériel :
  
  + Routeur pfSense 2.4.4
- + Host CentOS 7 minimal
- + Host Ubuntu 18.04.2 Desktop 
+ + Machines clients CentOS 7 minimal
  + OpenVswitch
  
- ## SHEMA
+## SHEMA
   
 <p align="center">
   <img src="./schema.PNG" title="Schéma">
 </p>
  
- ## Installation pfSense
- 
-  1) Démarrer la machine avec sup.install insseré
-  2) Laisser l'autoboot (par défault)
-  3) Accepter: "Copyright & Distribution"
-  4) Selectionner: "Install pfSense"
-  5) Selectionner: "French keymap" & " continue "
-  6) Partitioning: "Auto(UFS)"
-  7) Manual Config: "No"
-  8) Reboot et éjécter le supp-install
+## Installation de pfSense
+
+Tout d'abord :  
   
-## Configuration de pfSense
-### Option 1 : Assigner Interfaces
-  1) Définir VLANs now ? : NON
-  2) Renseigner interface WAN (em0) AND interface LAN (em0)
-  3) Valider : "y"
-    
-### Option 2 : Set Int-IP Add
-  1) Select int-WAN
-  2) DHCP4? : "y"
-  3) DHCP6? : "n"
-  4) "Enter" for none IPv6
-  5) Revert to HTTP ? "n"
-  6) <Enter> continue
-### Option 2 : Set Int-IP Add
-  1) Select int-LAN
-  2) Entrez l'adresse IPV4 : 192.168.1.1
-  3) Subnet masks CIDR : 24
-  4) gateway none
-  5) IPv6 none
-  6) DHCP server or LAN : choisir DHCP et appuyer sur "entrer"
-  7) adress range : 192.168.1.10 to 192.168.1.145
-  8) HTTP ? "no"
-  9)<Enter> continue
+1) Démarrer la machine avec le support d'installation inseré
+2) Laisser l'autoboot (par défaut)
+3) Accepter: "Copyright & Distribution"
+4) Selectionner: "Install pfSense"
+5) Selectionner: "French keymap" & "Continue"
+6) Partitioning: "Auto(UFS)"
+7) Manual Config: "No"
+8) Reboot et éjecter le support d'installation 
+  
 
-## Configuration WEB BASIC (ADMIN)
+## Configuration basique de pfSense
 
-Sur le poste client du LAN (dans l'url d'un navigateur) : taper l'adresse IP
+Après le reboot on arrive donc sur l'écran de menu. On va effectuer une configuration basique pour l'instant, celle-ci nous permettra d'accèder à l'interface web d'administration.   
+  
+1) Option 1 : Assign Interfaces
+  - Définir VLANs maintenant ? : "n"
+  - Renseigner interface WAN (em0) et l'interface LAN (em1)
+  - Valider : "y"
+2) Option 2 : Set Interface(s) IP address
+  - Selectionner l'interface WAN
+  - DHCPv4 ? : "y"
+  - DHCPv6 ? : "n"
+  - <Enter> pour pas d'IPv6
+  - Revert to HTTP ? : "n"
+  - <Enter> pour continuer  
+3) Option 2 : Set Interface(s) IP address
+  - Select l'interface LAN
+  - Entrez l'adresse IPV4 : 192.168.1.1
+  - Entrez le masque au format CIDR : 24
+  - <Enter> pour pas de gateway
+  - <Enter> pour pas d'IPv6
+  - DHCP server ? : "y"
+  - Adress range : 192.168.1.10 - 192.168.1.150
+  - Revert to HTTP ? "no"
+  - <Enter> pour continuer
+  
+Nous pouvons désormais accèder à l'interface web d'administration depuis le LAN à l'adresse `192.168.1.1`.  
+  
+Lors de la première connexion, vous serez guider pour une première "configuration".
 
 1) Suivre le setup
 2) Général Information :
-    hostname,domain,DNS
-    Laisser cocher "Override DNS"
+    - Renseigner hostname, domain et DNS
+    - Laisser cocher "Override DNS"
 3) Régler la localisation et l'heure
-4) Configure WAN interface :
-      IP Adress -> l'adresse IP du Client
-      Subnet masks : 24
+4) Configurer l'interface WAN
+5) Configurer l'interface LAN
 5) Modifier le mdp admin (qui est également le mdp de la machine root)
-6) Reload & finish
+6) Reload & Finish  
+  
+Normalement avec le schéma et la configuration actuelle, toutes les machines devraient pouvoir se ping et accèder à Internet.  
+  
+De plus toutes les machines ont accès au serveur DNS du routeur, et ce derniers récupère les serveurs DNS du WAN (grâce à l'option "Override DNS").
+
 
 
 

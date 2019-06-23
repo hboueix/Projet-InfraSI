@@ -3,13 +3,13 @@
     "auto_open": false,
     "auto_start": false,
     "grid_size": 75,
-    "name": "infra",
-    "project_id": "2cb58ccf-4d3d-4ded-b232-dd4d1e8b5f35",
+    "name": "infraSimple",
+    "project_id": "e1fce706-9624-4f82-9cce-b92a0b1d275a",
     "revision": 8,
     "scene_height": 1000,
     "scene_width": 2000,
     "show_grid": false,
-    "show_interface_labels": true,
+    "show_interface_labels": false,
     "show_layers": false,
     "snap_to_grid": false,
     "supplier": null,
@@ -19,7 +19,7 @@
         "links": [
             {
                 "filters": {},
-                "link_id": "bd18df96-00d7-4486-b5bf-dcd8c4686846",
+                "link_id": "f8c97df1-0a61-4583-8ca3-d79a1db8a0fc",
                 "nodes": [
                     {
                         "adapter_number": 1,
@@ -27,10 +27,10 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e1",
-                            "x": 44,
-                            "y": -23
+                            "x": 35,
+                            "y": -10
                         },
-                        "node_id": "3852387f-e9c6-4a92-8f6b-6cb5f1520df0",
+                        "node_id": "350167b4-0115-47ac-9ab8-7f9af52f3534",
                         "port_number": 0
                     },
                     {
@@ -38,11 +38,11 @@
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e0",
-                            "x": 33,
-                            "y": 55
+                            "text": "eth0",
+                            "x": 22,
+                            "y": 63
                         },
-                        "node_id": "8574a030-d196-4d05-905a-99c756935f69",
+                        "node_id": "28203b43-108e-4ba3-9a0d-af371cd83e36",
                         "port_number": 0
                     }
                 ],
@@ -50,19 +50,19 @@
             },
             {
                 "filters": {},
-                "link_id": "3b69ba8c-2d00-4b00-a174-870cf3b276f9",
+                "link_id": "76adda10-55bc-421f-827f-bd5609ec2aa0",
                 "nodes": [
                     {
-                        "adapter_number": 0,
+                        "adapter_number": 1,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e1",
-                            "x": 75,
-                            "y": 10
+                            "text": "eth1",
+                            "x": -9,
+                            "y": 4
                         },
-                        "node_id": "8574a030-d196-4d05-905a-99c756935f69",
-                        "port_number": 1
+                        "node_id": "28203b43-108e-4ba3-9a0d-af371cd83e36",
+                        "port_number": 0
                     },
                     {
                         "adapter_number": 0,
@@ -70,10 +70,10 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e0",
-                            "x": -7,
-                            "y": 35
+                            "x": 67,
+                            "y": 48
                         },
-                        "node_id": "055557a1-2a17-4581-b0b8-2670e7725ef1",
+                        "node_id": "87637778-e4a1-482e-b8a5-799cf31bfba5",
                         "port_number": 0
                     }
                 ],
@@ -81,49 +81,49 @@
             },
             {
                 "filters": {},
-                "link_id": "8b8743f8-94e8-45c7-b8bc-faa188ba9e99",
+                "link_id": "2a602c7c-0a6a-4136-bed2-f90dc4f5435f",
                 "nodes": [
+                    {
+                        "adapter_number": 2,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "eth2",
+                            "x": 61,
+                            "y": 7
+                        },
+                        "node_id": "28203b43-108e-4ba3-9a0d-af371cd83e36",
+                        "port_number": 0
+                    },
                     {
                         "adapter_number": 0,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e0",
-                            "x": 37,
-                            "y": 57
+                            "x": -3,
+                            "y": 45
                         },
-                        "node_id": "3852387f-e9c6-4a92-8f6b-6cb5f1520df0",
+                        "node_id": "e5484bb3-5420-4d27-9ee0-36168934ae06",
                         "port_number": 0
-                    },
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "29f2af6a-76d3-47a7-bca9-f8d731be28b7",
+                "nodes": [
                     {
                         "adapter_number": 0,
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "nat0",
-                            "x": 114,
-                            "y": -14
+                            "x": 95,
+                            "y": -1
                         },
-                        "node_id": "fdedb727-3f8d-4b3e-ac95-918376312b95",
-                        "port_number": 0
-                    }
-                ],
-                "suspend": false
-            },
-            {
-                "filters": {},
-                "link_id": "a967eb22-504f-4e02-9260-84cb85f917f9",
-                "nodes": [
-                    {
-                        "adapter_number": 0,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e0",
-                            "x": 72,
-                            "y": 35
-                        },
-                        "node_id": "00f72ba8-7a5c-472e-85c9-0960b8b94b32",
+                        "node_id": "1eaafa11-cb89-43a4-bdb9-c78761d0aa8b",
                         "port_number": 0
                     },
                     {
@@ -131,12 +131,12 @@
                         "label": {
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "e3",
-                            "x": -4,
-                            "y": 10
+                            "text": "e0",
+                            "x": 16,
+                            "y": 66
                         },
-                        "node_id": "8574a030-d196-4d05-905a-99c756935f69",
-                        "port_number": 3
+                        "node_id": "350167b4-0115-47ac-9ab8-7f9af52f3534",
+                        "port_number": 0
                     }
                 ],
                 "suspend": false
@@ -152,12 +152,12 @@
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "PfSense",
-                    "x": -54,
-                    "y": -34
+                    "text": "pfSense",
+                    "x": -53,
+                    "y": -29
                 },
-                "name": "PfSense",
-                "node_id": "3852387f-e9c6-4a92-8f6b-6cb5f1520df0",
+                "name": "pfSense",
+                "node_id": "350167b4-0115-47ac-9ab8-7f9af52f3534",
                 "node_type": "virtualbox",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -167,90 +167,14 @@
                     "adapters": 2,
                     "headless": false,
                     "linked_clone": false,
-                    "ram": 2048,
+                    "ram": 1024,
                     "use_any_adapter": false,
-                    "vmname": "PfSense"
+                    "vmname": "pfSense"
                 },
                 "symbol": ":/symbols/vbox_guest.svg",
                 "width": 65,
-                "x": -55,
-                "y": 63,
-                "z": 0
-            },
-            {
-                "compute_id": "vm",
-                "console": 5000,
-                "console_type": "telnet",
-                "first_port_name": null,
-                "height": 32,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "Ethernetswitch-1",
-                    "x": -42,
-                    "y": -25
-                },
-                "name": "Ethernetswitch-1",
-                "node_id": "8574a030-d196-4d05-905a-99c756935f69",
-                "node_type": "ethernet_switch",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {
-                    "ports_mapping": [
-                        {
-                            "name": "Ethernet0",
-                            "port_number": 0,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet1",
-                            "port_number": 1,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet2",
-                            "port_number": 2,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet3",
-                            "port_number": 3,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet4",
-                            "port_number": 4,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet5",
-                            "port_number": 5,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet6",
-                            "port_number": 6,
-                            "type": "access",
-                            "vlan": 1
-                        },
-                        {
-                            "name": "Ethernet7",
-                            "port_number": 7,
-                            "type": "access",
-                            "vlan": 1
-                        }
-                    ]
-                },
-                "symbol": ":/symbols/ethernet_switch.svg",
-                "width": 72,
                 "x": -48,
-                "y": -86,
+                "y": 107,
                 "z": 0
             },
             {
@@ -267,41 +191,7 @@
                     "y": -25
                 },
                 "name": "client1",
-                "node_id": "00f72ba8-7a5c-472e-85c9-0960b8b94b32",
-                "node_type": "virtualbox",
-                "port_name_format": "Ethernet{0}",
-                "port_segment_size": 0,
-                "properties": {
-                    "acpi_shutdown": false,
-                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
-                    "adapters": 2,
-                    "headless": false,
-                    "linked_clone": false,
-                    "ram": 2048,
-                    "use_any_adapter": false,
-                    "vmname": "client1"
-                },
-                "symbol": ":/symbols/vbox_guest.svg",
-                "width": 65,
-                "x": -290,
-                "y": -135,
-                "z": 0
-            },
-            {
-                "compute_id": "local",
-                "console": 5002,
-                "console_type": "telnet",
-                "first_port_name": "",
-                "height": 59,
-                "label": {
-                    "rotation": 0,
-                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "server1",
-                    "x": -3,
-                    "y": -25
-                },
-                "name": "server1",
-                "node_id": "055557a1-2a17-4581-b0b8-2670e7725ef1",
+                "node_id": "87637778-e4a1-482e-b8a5-799cf31bfba5",
                 "node_type": "virtualbox",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -313,12 +203,83 @@
                     "linked_clone": false,
                     "ram": 1024,
                     "use_any_adapter": false,
-                    "vmname": "server1"
+                    "vmname": "client1"
                 },
                 "symbol": ":/symbols/vbox_guest.svg",
                 "width": 65,
-                "x": 202,
-                "y": -135,
+                "x": -260,
+                "y": -90,
+                "z": 0
+            },
+            {
+                "compute_id": "local",
+                "console": 5002,
+                "console_type": "telnet",
+                "first_port_name": "",
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "client2",
+                    "x": 0,
+                    "y": -25
+                },
+                "name": "client2",
+                "node_id": "e5484bb3-5420-4d27-9ee0-36168934ae06",
+                "node_type": "virtualbox",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "acpi_shutdown": false,
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 2,
+                    "headless": false,
+                    "linked_clone": false,
+                    "ram": 1024,
+                    "use_any_adapter": false,
+                    "vmname": "client2"
+                },
+                "symbol": ":/symbols/vbox_guest.svg",
+                "width": 65,
+                "x": 201,
+                "y": -65,
+                "z": 0
+            },
+            {
+                "compute_id": "vm",
+                "console": 5000,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "height": 48,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "OpenvSwitch",
+                    "x": -35,
+                    "y": -25
+                },
+                "name": "OpenvSwitch",
+                "node_id": "28203b43-108e-4ba3-9a0d-af371cd83e36",
+                "node_type": "docker",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "adapters": 16,
+                    "aux": 5001,
+                    "console_http_path": "/",
+                    "console_http_port": 80,
+                    "console_resolution": "1024x768",
+                    "container_id": "6acb40dc6631be3abc5f87f8056026461f29582ce8ad2842eb3b2b3a6daaf622",
+                    "environment": null,
+                    "extra_hosts": null,
+                    "image": "gns3/openvswitch:latest",
+                    "start_command": null,
+                    "usage": "By default all interfaces are connected to the br0"
+                },
+                "symbol": ":/symbols/multilayer_switch.svg",
+                "width": 51,
+                "x": -31,
+                "y": -35,
                 "z": 0
             },
             {
@@ -335,7 +296,7 @@
                     "y": -25
                 },
                 "name": "NAT",
-                "node_id": "fdedb727-3f8d-4b3e-ac95-918376312b95",
+                "node_id": "1eaafa11-cb89-43a4-bdb9-c78761d0aa8b",
                 "node_type": "nat",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
@@ -351,14 +312,14 @@
                 },
                 "symbol": ":/symbols/cloud.svg",
                 "width": 159,
-                "x": -223,
-                "y": 210,
+                "x": -156,
+                "y": 227,
                 "z": 0
             }
         ]
     },
     "type": "topology",
-    "variables": null,
+    "variables": [],
     "version": "2.1.15",
     "zoom": 100
 }
