@@ -8,7 +8,7 @@
  + Machines clients CentOS 7 minimal
  + OpenVswitch
  
-## SHEMA
+## Schéma 
   
 <p align="center">
   <img src="./images/schema.PNG" title="Schéma">
@@ -70,7 +70,7 @@ Lors de la première connexion, vous serez guider pour une première "configurat
   
 Normalement avec le schéma et la configuration actuelle, toutes les machines devraient pouvoir se ping et accèder à Internet.  
   
-De plus toutes les machines ont accès au serveur DNS du routeur, et ce derniers récupère les serveurs DNS du WAN (grâce à l'option "Override DNS").
+De plus toutes les machines ont accès au serveur DNS du routeur, et ce dernier récupère les serveurs DNS du WAN (grâce à l'option "Override DNS").
 
 
 
