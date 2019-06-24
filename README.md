@@ -109,7 +109,10 @@ Il faut maintenant activer le DHCP sur les interfaces VLAN 10 et VLAN 20 sur le 
 Activez le DHCP sur l'interface, spécifiez le range d'adresses et validez.  
 Répétez l'opération pour "OPT2".  
   
-Les machines ont maintenant une IP attribuée automatiquement suivant leur VLAN.
+Les machines ont maintenant une IP attribuée automatiquement suivant leur VLAN.  
+  
+Il ne faut pas oublier d'ajouter une règle pour l'interface OPT1 et OPT2 dans "System" > "Advanced" > "Firewall & NAT" pour pouvoir ping les machines du VLAN 10 depuis les machines du VLAN 20  et inversement.  
+  
 
 
 
