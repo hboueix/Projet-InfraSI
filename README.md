@@ -72,6 +72,45 @@ Normalement avec le schéma et la configuration actuelle, toutes les machines de
   
 De plus toutes les machines ont accès au serveur DNS du routeur, et ce dernier récupère les serveurs DNS du WAN (grâce à l'option "Override DNS").
 
+## Configuration de VLANS
+
+Il faut commencer par configurer les VLANS sur le routeur, depuis l'interface web d'administration :  
+  
+ "Interfaces" > "Assignment" > "VLANS"  
+   
+Créez une interface VLAN 10 et une VLAN 20 sur l'interface LAN. Associez leur respectivement l'adresse IP `192.168.10.254` et `192.168.20.254`.  
+  
+Ensuite cela se passe sur le switch, connectez vous à la console en telnet (généralement sur le port 5000 de la GNS3 VM). Il faut ajouter 2 ports "internes" associé à chacune de VLAN :  
+```
+/ # ovs-vsctl add-port br0 vlan10 tag=10 -- set interface vlan10 type=internal
+/ # ovs-vsctl set port vlan10 vlan_mode=access
+/ # ip addr add 192.168.10.1/24 brd + dev vlan10
+/ # ip link set dev vlan10 up
+/ #
+/ # ovs-vsctl add-port br0 vlan20 tag=20 -- set interface vlan20 type=internal
+/ # ovs-vsctl set port vlan20 vlan_mode=access
+/ # ip addr add 192.168.20.1/24 brd + dev vlan20
+/ # ip link set dev vlan20 up
+```  
+  
+Associez également les interfaces physiques au VLANs :  
+```
+/ # ovs-vsctl set port eth0 trunks=10,20
+/ # ovs-vsctl set port eth1 tag=10
+/ # ovs-vsctl set port eth1 vlan_mode=access
+/ # ovs-vsctl set port eth2 tag=20
+/ # ovs-vsctl set port eth2 vlan_mode=access
+```  
+  
+Il faut maintenant activer le DHCP sur les interfaces VLAN 10 et VLAN 20 sur le routeur. De retour sur l'interface d'administration :  
+  
+"Services" > "DHCP Server" > "OPT1"  
+  
+Activez le DHCP sur l'interface, spécifiez le range d'adresses et validez.  
+Répétez l'opération pour "OPT2".  
+  
+Les machines ont maintenant une IP attribuée automatiquement suivant leur VLAN.
+
 
 
 
